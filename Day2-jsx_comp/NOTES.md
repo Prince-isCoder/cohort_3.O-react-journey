@@ -1,4 +1,4 @@
-# React — Day 3: JSX, Components & Props
+# React — Day 2: JSX, Components & Props
 
 ## 0. Scaffolding note
 Today's project used:
