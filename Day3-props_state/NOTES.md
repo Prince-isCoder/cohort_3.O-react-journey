@@ -1,4 +1,4 @@
-# React — Props & State: Imports, Component Structure, Re-render & `useState`
+# Day 3 React — Props & State: Imports, Component Structure, Re-render & `useState`
 
 ## 0. Recap — what's covered so far
 - React 0 → Vite → `npm create vite@7` → `package.json` / `node_modules` / `package-lock.json`
