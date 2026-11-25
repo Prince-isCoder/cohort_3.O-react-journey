@@ -1,22 +1,44 @@
 import React from 'react'
 
-const Usercard = () => {
+const Usercard = ({ users }) => {
     return (
-        <div className='p-4 border border-purple-500 rounded flex flex-col gap-4'>
-            <div className='h-30 w-30'>
-                <img
-                className='object-fit h-full w-full rounded-xl'
-                    src="https://i.pinimg.com/736x/e5/2c/ec/e52cecdc442ed6eb12543ca9a54f1540.jpg"
-                    alt="" />
+        <div className='group w-full max-w-sm bg-zinc-900 border border-zinc-800 rounded-2xl p-5 flex flex-col gap-5 shadow-lg hover:border-purple-500/50 hover:shadow-purple-500/10 transition-all duration-300'>
+
+            {/* User Profile */}
+            <div className='flex items-center gap-4'>
+                <div className='h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-zinc-700'>
+                    <img
+                        className='object-cover h-full w-full'
+                        src={users.image}
+                        alt={users.name}
+                    />
+                </div>
+
+                <div className='flex flex-col gap-1 min-w-0'>
+                    <h1 className='text-white font-semibold text-lg truncate'>
+                        {users.name}
+                    </h1>
+                    <h1 className='text-sm text-zinc-400 break-all'>
+                        {users.email}
+                    </h1>
+                    <h1 className='text-sm text-zinc-400'>
+                        {users.mobile}
+                    </h1>
+                </div>
             </div>
-            <div className='flex flex-col text-white gap-1'>
-                <h1>Name</h1>
-                <h1 className='text-sm'>Email</h1>
-                <h1 className='text-sm'>Contact</h1>
-            </div>
-            <div className='flex justify-between w-full gap-4'>
-                <button className='bg-yellow-700 text-white py-2 px-3 rounded'>Update</button>
-                <button className='bg-red-700 text-white py-2 px-3 rounded'>Delete</button>
+
+            {/* Divider */}
+            <div className='border-t border-zinc-800'></div>
+
+            {/* Actions */}
+            <div className='flex justify-between w-full gap-3'>
+                <button className='flex-1 bg-amber-500/10 text-amber-400 border border-amber-500/20 hover:bg-amber-500 hover:text-black font-medium py-2.5 px-3 rounded-xl transition-all duration-200 cursor-pointer'>
+                    Update
+                </button>
+
+                <button className='flex-1 bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500 hover:text-white font-medium py-2.5 px-3 rounded-xl transition-all duration-200 cursor-pointer'>
+                    Delete
+                </button>
             </div>
         </div>
     )
