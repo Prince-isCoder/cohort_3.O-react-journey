@@ -276,4 +276,4 @@ and in handleSubmit()
     })
 
 
-Now we can work on some other functionality, like Update and Delete button 
+Now we can work on some other functionality, like Update and Delete button
