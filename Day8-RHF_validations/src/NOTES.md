@@ -274,6 +274,5 @@ and in handleSubmit()
         setToggle((prev) => !prev),
         reset()
     })
-
-
+    
 Now we can work on some other functionality, like Update and Delete button
